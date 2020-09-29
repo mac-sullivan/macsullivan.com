@@ -1,0 +1,105 @@
+h2 button.accordionBtn[aria-expanded="true"]::after {
+    content: "";
+    background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' preserveAspectRatio='none'%3E%3Cpath fill='%23000000' style='fill: var(--color1, %23000000)' d='M16 10c0 0.553-0.048 1-0.601 1h-10.798c-0.552 0-0.601-0.447-0.601-1s0.049-1 0.601-1h10.799c0.552 0 0.6 0.447 0.6 1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+h2 button.accordionBtn::after {
+    content: "";
+    position: absolute;
+    background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' preserveAspectRatio='none'%3E%3Cpath fill='%23000000' style='fill: var(--color1, %23000000)' d='M16 10c0 0.553-0.048 1-0.601 1h-4.399v4.399c0 0.552-0.447 0.601-1 0.601s-1-0.049-1-0.601v-4.399h-4.399c-0.552 0-0.601-0.447-0.601-1s0.049-1 0.601-1h4.399v-4.399c0-0.553 0.447-0.601 1-0.601s1 0.048 1 0.601v4.399h4.399c0.553 0 0.601 0.447 0.601 1z'%3E%3C/path%3E%3C/svg%3E");
+    top: 1.25rem;
+    left: 1rem;
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+@media (min-width: 50.0625em) {
+    h2 button.accordionBtn::after {
+        top: 1.6rem;
+    }
+}
+
+h2 button.accordionBtn[aria-expanded="true"] {
+    border-bottom: none;
+}
+
+h2 button.accordionBtn {
+    position: relative;
+    all: inherit;
+    border-top: 2px solid #000;
+    padding: 1rem 35px;
+    margin: 0;
+    cursor: pointer;
+    width: 100%;
+    padding-left: 3rem;
+}
+
+.accordion-container .accordion-wrap:last-child h2 button.accordionBtn {
+    border-bottom: 2px solid #000;
+}
+
+.accordion-container .accordion-wrap:last-child h2 button.accordionBtn[aria-expanded="true"] {
+    border-bottom: none;
+}
+
+.accordion-wrap {
+    position: relative;
+}
+
+.accordion-wrap h2 {
+    margin-bottom: 0;
+}
+
+.accordion-panel {
+    margin-top: 2rem;
+    margin-bottom: 4.5rem;
+}
+
+.accordion-panel p {
+    margin-bottom: 1.5rem;
+    max-width: 450px;
+    font-size: 1.25rem;
+}
+
+.portfolioHeader {
+    margin-bottom: 1rem;
+}
+
+.accordionBtn:hover {
+    background-color: #eeeeee;
+}
+
+.portfolioDescription {
+    margin-bottom: 3rem;
+    max-width: 700px;
+    font-size: 1.25rem;
+}
+
+.accordion-wrap img {
+    max-width: 450px;
+    margin: 0 auto 2rem;
+    display: block;
+    width: 100%;
+}
+
+.accordion-wrap ul {
+    list-style-type: none;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.animate-top {
+    position: relative;
+    animation: animatetop 0.4s;
+}
+
+@keyframes animatetop {
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}

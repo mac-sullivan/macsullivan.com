@@ -1,0 +1,57 @@
+body {
+    --text-color: #222;
+    --bkg-color: #fff;
+    --header-bkg-color: rgba(237, 237, 237, 0.8);
+    --anchor-color: #000000;
+    --icon-fill: #000000;
+}
+
+body.dark-theme {
+    --text-color: #eee;
+    --bkg-color: #121212;
+    --header-bkg-color: rgba(17, 17, 17, 0.8);
+    --anchor-color: #f7f7f7;
+    --icon-color: #f7f7f7;
+}
+
+
+/* .body header {
+    background-color: var(--header-bkg-color);
+}
+*/
+
+.body header a {
+    color: var(--anchor-color);
+}
+
+.body.dark-theme header {
+    background-color: var(--header-bkg-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    /* defaults to dark theme */
+    body {
+        --text-color: #eee;
+        --bkg-color: #121212;
+    }
+    body.light-theme {
+        --text-color: #222;
+        --bkg-color: #fff;
+    }
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: var(--bkg-color);
+}
+
+.body.lightTheme .svg.icon-theme.icon-sun {
+    display: none;
+}
+
+.body.lightTheme .icon-moon {
+    display: block;
+}
